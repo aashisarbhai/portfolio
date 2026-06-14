@@ -53,12 +53,12 @@ const AppShowcase = () => {
             </div>
             <div className="text-content">
               <h2>
-                On-Demand Rides Made Simple with a Powerful, User-Friendly App
-                called Ryde
+                StayEase – Full Stack Hotel Listing Platform
               </h2>
               <p className="text-white-50 md:text-xl">
-                An app built with React Native, Expo, & TailwindCSS for a fast,
-                user-friendly experience.
+                Tech Stack - Node.js, Express.js, MongoDB, EJS, CSS, Bootstrap, MVC architecture, Mapbox, Cloudinary
+                <br></br>Developed a full-stack web application for exploring and managing hotel listings with user authentication and role-based access.
+                <br></br>Implemented MVC architecture to ensure clean separation of business logic, UI, and data handling.
               </p>
             </div>
           </div>
@@ -71,14 +71,14 @@ const AppShowcase = () => {
                   alt="Library Management Platform"
                 />
               </div>
-              <h2>The Library Management Platform</h2>
+              <h2>Finora - Full Stack Stock Trading Platform</h2>
             </div>
 
             <div className="project" ref={ycDirectoryRef}>
               <div className="image-wrapper bg-[#FFE7EB]">
                 <img src="/images/project3.png" alt="YC Directory App" />
               </div>
-              <h2>YC Directory - A Startup Showcase App</h2>
+              <h2>Meetify - Full Stack Video Conferencing Web Application </h2>
             </div>
           </div>
         </div>

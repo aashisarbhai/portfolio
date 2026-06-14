@@ -85,12 +85,12 @@ section {
   }
 
   .hero-text {
-    @apply flex flex-col justify-center md:text-[60px] text-[30px] font-semibold relative z-10 pointer-events-none;
+    @apply flex flex-col justify-center md:text-[52px] text-[26px] font-semibold relative z-10 pointer-events-none;
     img {
-      @apply size-8 md:size-10 object-contain;
+      @apply size-7 md:size-9 object-contain;
     }
     .slide {
-      @apply absolute pt-0 px-2 md:px-5 py-[30px] h-[48px] md:h-[78px] md:translate-y-1 translate-y-0 overflow-hidden;
+      @apply absolute pt-0 px-2 md:px-4 py-[25px] h-[42px] md:h-[68px] md:translate-y-1 translate-y-0 overflow-hidden;
     }
   }
 
@@ -100,6 +100,23 @@ section {
 
   .hero-3d-layout {
     @apply xl:w-[70%] w-full h-full min-h-[50vh] absolute xl:-top-20 top-24 xl:-right-20 right-0;
+  }
+
+  .hero-photo-layout {
+    @apply absolute z-10 xl:right-20 lg:right-28 right-1/2 xl:top-24 md:top-32 top-72 translate-x-1/2 lg:translate-x-0;
+    @apply size-[250px] md:size-[330px] xl:size-[400px];
+  }
+
+  .hero-photo {
+    @apply w-full h-full rotate-[-28deg] object-cover object-center rounded-full shadow-2xl border-4 border-white/10;
+  }
+
+  .hero-profile-links {
+    @apply mt-5 flex flex-wrap justify-center gap-3;
+
+    a {
+      @apply rounded-full border border-white/10 bg-black-100 px-4 py-2 text-sm font-medium text-white-50 transition-colors duration-300 hover:bg-white-50 hover:text-black;
+    }
   }
 
   .navbar {

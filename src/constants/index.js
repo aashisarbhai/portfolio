@@ -1,31 +1,31 @@
 const navLinks = [
   {
-    name: "Work",
-    link: "#work",
-  },
-  {
-    name: "Experience",
-    link: "#experience",
+    name: "About",
+    link: "#about",
   },
   {
     name: "Skills",
     link: "#skills",
   },
   {
-    name: "Testimonials",
-    link: "#testimonials",
+    name: "Projects",
+    link: "#work",
+  },
+  {
+    name: "Achievements",
+    link: "#achievements",
   },
 ];
 
 const words = [
-  { text: "Ideas", imgPath: "/images/ideas.svg" },
-  { text: "Concepts", imgPath: "/images/concepts.svg" },
-  { text: "Designs", imgPath: "/images/designs.svg" },
-  { text: "Code", imgPath: "/images/code.svg" },
-  { text: "Ideas", imgPath: "/images/ideas.svg" },
-  { text: "Concepts", imgPath: "/images/concepts.svg" },
-  { text: "Designs", imgPath: "/images/designs.svg" },
-  { text: "Code", imgPath: "/images/code.svg" },
+  { text: "Software Developer", imgPath: "/images/ideas.svg" },
+  { text: "Full Stack Developer", imgPath: "/images/concepts.svg" },
+  { text: "Problem Solver", imgPath: "/images/designs.svg" },
+  { text: "Continuous Learner", imgPath: "/images/code.svg" },
+  { text: "DSA Enthusiast", imgPath: "/images/ideas.svg" },
+  { text: "Quick Learner", imgPath: "/images/concepts.svg" },
+  { text: "Team Player", imgPath: "/images/designs.svg" },
+  { text: "User-Centric Developer", imgPath: "/images/code.svg" },
 ];
 
 const counterItems = [

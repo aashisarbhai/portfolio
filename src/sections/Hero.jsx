@@ -1,10 +1,15 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
-import AnimatedCounter from "../components/models/AnimatedCounter";
 import Button from "../components/models/Button";
 import { words } from "../constants";
-import HeroExperience from "../components/models/hero_models/HeroExperience";
+
+const profileLinks = [
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/aashisarbhai/" },
+  { name: "GitHub", href: "https://github.com/aashisarbhai" },
+  { name: "LeetCode", href: "https://leetcode.com/u/l2EiVapHl7/" },
+  { name: "Email", href: "mailto:sarbhaiaashi@gmail.com" },
+];
 
 const Hero = () => {
   useGSAP(() => {
@@ -27,7 +32,7 @@ const Hero = () => {
           <div className="flex flex-col gap-7">
             <div className="hero-text">
               <h1>
-                I'm a
+                Hi, I'm a 
                 <span className="slide">
                   <span className="wrapper">
                     {words.map((word, index) => (
@@ -46,32 +51,48 @@ const Hero = () => {
                   </span>
                 </span>
               </h1>
-              <h1>into Real Projects</h1>
-              <h1>that Deliver Results</h1>
             </div>
 
             <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-              Hi, I’m Adrian, a developer based in Croatia with a passion for
-              code.
+              I’m passionate about full-stack development and enjoy solving <br></br>problems on LeetCode.
             </p>
 
             <Button
-              text="See My Work"
+              text="Download Resume"
               className="md:w-80 md:h-16 w-60 h-12"
-              id="counter"
+              href="/resume/aashisarbhai_resume.pdf"
+              download="Aashi_Sarbhai_Resume.pdf"
             />
           </div>
         </header>
 
-        {/* RIGHT: 3D Model or Visual */}
+        {/* RIGHT: Hero Photo */}
         <figure>
-          <div className="hero-3d-layout">
-            <HeroExperience />
+          <div className="hero-photo-layout">
+            <img
+              src="/images/aashi-photo.jpeg"
+              alt="Aashi"
+              className="hero-photo"
+            />
+            <div className="hero-profile-links">
+              {profileLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  target={link.href.startsWith("mailto:") ? undefined : "_blank"}
+                  rel={
+                    link.href.startsWith("mailto:")
+                      ? undefined
+                      : "noreferrer noopener"
+                  }
+                >
+                  {link.name}
+                </a>
+              ))}
+            </div>
           </div>
         </figure>
       </div>
-
-      <AnimatedCounter />
     </section>
   );
 };
