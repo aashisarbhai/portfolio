@@ -3,18 +3,18 @@ import Contact from "./sections/Contact";
 import TechStack from "./sections/TechStack";
 import Hero from "./sections/Hero";
 import ShowcaseSection from "./sections/ShowcaseSection";
-import LogoShowcase from "./sections/LogoShowcase";
 import FeatureCards from "./sections/FeatureCards";
+import Achievements from "./sections/Achievements";
 import Navbar from "./components/models/NavBar";
 
 const App = () => (
   <>
     <Navbar />
     <Hero />
-    <ShowcaseSection />
-    <LogoShowcase />
-    <FeatureCards />
     <TechStack />
+    <ShowcaseSection />
+    <Achievements />
+    <FeatureCards />
     <Contact />
     <Footer />
   </>

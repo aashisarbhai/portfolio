@@ -51,6 +51,16 @@ section {
     @apply px-5 md:px-10 md:mt-40 mt-20;
   }
 
+  #skills {
+    scroll-margin-top: 110px;
+  }
+
+  @media (min-width: 768px) {
+    #skills {
+      scroll-margin-top: 140px;
+    }
+  }
+
   .mt-responsive {
     @apply xl:mt-20 md:mt-0 mt-40;
   }
@@ -175,47 +185,139 @@ section {
     @apply w-full mt-20 px-5 md:px-20 py-10 md:py-20 flex items-center justify-center;
 
     .showcaselayout {
-      @apply flex xl:flex-row flex-col gap-10 justify-between;
+      @apply flex flex-col gap-10 mt-16;
     }
 
-    .first-project-wrapper {
-      @apply h-full flex flex-col justify-between xl:w-[60%];
+    .project-row {
+      @apply grid grid-cols-1 xl:grid-cols-[0.95fr_1.05fr] gap-6 md:gap-10 rounded-lg overflow-hidden border border-black-50 bg-black-100 p-4 md:p-6;
 
       .image-wrapper {
-        @apply xl:h-[70vh] md:h-[50vh] h-96 relative;
+        @apply h-72 md:h-96 xl:h-[28rem] relative rounded-lg overflow-hidden;
 
         img {
-          @apply w-full h-full object-cover rounded-xl absolute inset-0;
+          @apply w-full h-full object-contain rounded-lg absolute inset-0;
         }
       }
 
       .text-content {
-        @apply space-y-5 mt-5;
-
-        .badges {
-          @apply flex gap-2 mb-4;
-        }
+        @apply flex flex-col justify-center gap-5;
 
         h2 {
           @apply text-2xl md:text-3xl lg:text-4xl font-bold;
         }
+
+        .project-details {
+          @apply flex flex-col gap-3 text-white-50 md:text-lg;
+        }
+
+        .project-links {
+          @apply flex flex-wrap gap-3 pt-2;
+
+          a {
+            @apply inline-flex items-center justify-center gap-2 rounded-lg border border-black-50 bg-black-100 px-4 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-black-50;
+
+            &[aria-disabled="true"] {
+              @apply opacity-50 pointer-events-none;
+            }
+          }
+
+          img {
+            @apply size-5;
+          }
+        }
       }
     }
 
-    .project-list-wrapper {
-      @apply flex md:flex-row flex-col xl:flex-col gap-10 xl:w-[40%];
-
-      .image-wrapper {
-        @apply xl:h-[37vh] md:h-52 lg:h-72 h-64 relative rounded-xl xl:px-5 2xl:px-12 py-0;
-      }
+    .explore-more-link {
+      @apply mx-auto inline-flex items-center justify-center gap-3 rounded-lg border border-black-50 bg-black-100 px-6 py-4 text-base font-semibold text-white transition-all duration-300 hover:bg-black-50;
 
       img {
-        @apply w-full h-full object-contain rounded-xl;
+        @apply size-6;
       }
+    }
+  }
 
-      h2 {
-        @apply text-lg md:text-xl lg:text-2xl font-semibold mt-5;
+  .achievements-section {
+    @apply w-full px-5 md:px-20 py-10 md:py-20 overflow-hidden;
+
+    .achievements-list {
+      @apply relative mt-16 flex flex-col gap-6 md:gap-8;
+    }
+
+    .achievements-list::before {
+      @apply hidden md:block absolute left-1/2 top-0 h-full w-px content-[''];
+      background: linear-gradient(
+        180deg,
+        rgba(98, 224, 255, 0),
+        rgba(98, 224, 255, 0.75),
+        rgba(253, 92, 121, 0.7),
+        rgba(109, 69, 206, 0.7),
+        rgba(109, 69, 206, 0)
+      );
+    }
+
+    .achievement-card {
+      @apply relative w-full md:w-[47%] rounded-lg border border-black-50 bg-black-100 p-5 md:p-7 shadow-2xl;
+      isolation: isolate;
+      transition:
+        border-color 0.4s ease,
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+
+      p {
+        @apply relative z-10 text-white-50 md:text-lg leading-relaxed;
       }
+    }
+
+    .achievement-card::after {
+      @apply pointer-events-none absolute inset-0 -z-10 rounded-lg content-[''];
+      background: linear-gradient(
+        115deg,
+        rgba(98, 224, 255, 0.09),
+        rgba(253, 92, 121, 0.07),
+        rgba(109, 69, 206, 0.09),
+        rgba(98, 224, 255, 0.09)
+      );
+      background-size: 250% 250%;
+      animation: achievement-gradient 8s ease infinite;
+    }
+
+    .achievement-card:hover {
+      border-color: rgba(98, 224, 255, 0.35);
+      box-shadow: 0 24px 70px rgba(82, 174, 255, 0.12);
+      transform: translateY(-4px);
+    }
+
+    .achievement-card::before {
+      @apply hidden md:block absolute top-8 size-4 rounded-full border border-white/20 bg-white-50 content-[''];
+      box-shadow:
+        0 0 0 5px rgba(98, 224, 255, 0.08),
+        0 0 20px rgba(98, 224, 255, 0.35);
+    }
+
+    .achievement-left {
+      @apply md:self-start;
+
+      &::before {
+        @apply -right-[calc(6.4%+0.5rem)];
+      }
+    }
+
+    .achievement-right {
+      @apply md:self-end;
+
+      &::before {
+        @apply -left-[calc(6.4%+0.5rem)];
+      }
+    }
+
+    .achievement-index {
+      @apply relative z-10 mb-4 w-fit rounded-full border border-white/10 px-3 py-1 text-sm font-semibold text-white;
+      background: linear-gradient(
+        120deg,
+        rgba(82, 174, 255, 0.22),
+        rgba(253, 92, 121, 0.2)
+      );
     }
   }
 
@@ -293,6 +395,10 @@ section {
 
   .tech-icon-wrapper {
     @apply flex justify-center items-center w-52 h-60 relative;
+
+    img {
+      @apply max-w-36 max-h-36 object-contain;
+    }
   }
 
   form {
@@ -312,6 +418,71 @@ section {
         @apply inline-block;
       }
     }
+
+    button:disabled {
+      @apply cursor-not-allowed opacity-70;
+    }
+
+    .contact-form-status {
+      @apply text-center text-sm leading-relaxed text-white-50;
+    }
+  }
+
+  .contact-3d-scene {
+    @apply relative h-96 w-full overflow-hidden rounded-3xl border border-white/10 md:h-[34rem] xl:h-full xl:min-h-[36rem] hover:cursor-grab;
+    background:
+      radial-gradient(circle at 28% 20%, rgba(255, 255, 255, 0.14), transparent 30%),
+      linear-gradient(135deg, #0e0e10 0%, #20212b 52%, #111216 100%);
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.45);
+  }
+
+  .contact-3d-scene::after {
+    @apply pointer-events-none absolute inset-0 content-[''];
+    background: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0.28),
+      rgba(255, 255, 255, 0) 35%,
+      rgba(0, 0, 0, 0.12)
+    );
+  }
+
+  .contact-photo-scene {
+    @apply relative flex h-full min-h-96 items-center justify-center overflow-hidden rounded-xl border border-black-50 bg-black-100 p-6 md:p-10;
+    perspective: 1200px;
+  }
+
+  .contact-photo-scene::before {
+    @apply absolute inset-6 rounded-xl border border-white/10 content-[''];
+    transform: translateZ(-40px) rotate(-2deg);
+  }
+
+  .contact-photo-card {
+    @apply relative z-10 aspect-[4/5] w-full max-w-sm overflow-hidden rounded-xl border border-white/15 bg-black-200 shadow-2xl transition-transform duration-500;
+    transform: rotateY(-13deg) rotateX(6deg);
+    transform-style: preserve-3d;
+    box-shadow: 0 34px 90px rgba(0, 0, 0, 0.55);
+
+    img {
+      @apply h-full w-full object-cover object-center;
+    }
+  }
+
+  .contact-photo-scene:hover .contact-photo-card {
+    transform: rotateY(-7deg) rotateX(3deg) translateY(-8px);
+  }
+
+  .contact-photo-card::after {
+    @apply absolute inset-0 content-[''];
+    background: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0.18),
+      rgba(255, 255, 255, 0) 38%,
+      rgba(0, 0, 0, 0.25)
+    );
+  }
+
+  .contact-photo-caption {
+    @apply absolute bottom-6 left-6 right-6 z-20 rounded-lg border border-white/10 bg-black/70 px-4 py-3 text-center text-sm font-medium text-white-50 backdrop-blur-md md:text-base;
   }
 
   .footer {
@@ -376,6 +547,16 @@ section {
   }
   87.5% {
     transform: translateY(-87.5%);
+  }
+}
+
+@keyframes achievement-gradient {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
   }
 }
 

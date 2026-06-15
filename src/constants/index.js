@@ -120,10 +120,8 @@ const techStackIcons = [
     rotation: [0, 0, 0],
   },
   {
-    name: "Python Developer",
-    modelPath: "/models/python-transformed.glb",
-    scale: 0.8,
-    rotation: [0, 0, 0],
+    name: "C++ Developer",
+    imgPath: "/images/logos/cpp.svg",
   },
   {
     name: "Backend Developer",
@@ -132,10 +130,8 @@ const techStackIcons = [
     rotation: [0, -Math.PI / 2, 0],
   },
   {
-    name: "Interactive Developer",
-    modelPath: "/models/three.js-transformed.glb",
-    scale: 0.05,
-    rotation: [0, 0, 0],
+    name: "Database Developer",
+    imgPath: "/images/logos/mongodb.svg",
   },
   {
     name: "Project Manager",
@@ -248,18 +244,22 @@ const socialImgs = [
   {
     name: "insta",
     imgPath: "/images/insta.png",
-  },
-  {
-    name: "fb",
-    imgPath: "/images/fb.png",
-  },
-  {
-    name: "x",
-    imgPath: "/images/x.png",
+    link: "https://instagram.com/aashisarbhai",
   },
   {
     name: "linkedin",
     imgPath: "/images/linkedin.png",
+    link: "https://linkedin.com/in/aashisarbhai",
+  },
+  {
+    name: "leetcode",
+    imgPath: "/images/leetcode.svg",
+    link: "https://leetcode.com/u/l2EiVapHl7/",
+  },
+  {
+    name: "github",
+    imgPath: "/images/github.svg",
+    link: "https://github.com/aashisarbhai",
   },
 ];
 
