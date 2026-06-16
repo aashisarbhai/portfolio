@@ -4,13 +4,11 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        <div className="flex flex-col justify-center">
-          {/* <p>Terms & Conditions</p> */}
-        </div>
+        <div />
         <div className="socials">
-          {socialImgs.map((socialImg, index) => (
+          {socialImgs.map((socialImg) => (
             <a
-              key={index}
+              key={socialImg.name}
               className="icon"
               href={socialImg.link}
               target="_blank"
@@ -23,7 +21,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-col justify-center">
           <p className="text-center md:text-end">
-            © {new Date().getFullYear()} Aashi Sarbhai. All rights reserved.
+            &copy; {new Date().getFullYear()} Aashi Sarbhai. All rights reserved.
           </p>
         </div>
       </div>
