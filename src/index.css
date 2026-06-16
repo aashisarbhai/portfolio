@@ -108,7 +108,11 @@ section {
       @apply size-7 md:size-9 object-contain;
     }
     .slide {
-      @apply absolute pt-0 px-2 md:px-4 py-[25px] h-[42px] md:h-[68px] md:translate-y-1 translate-y-0 overflow-hidden;
+      @apply absolute px-2 md:px-4 h-[44px] md:h-[72px] translate-y-0 overflow-hidden;
+    }
+
+    .hero-slide-item {
+      @apply flex h-[44px] items-center gap-1 md:h-[72px] md:gap-3;
     }
   }
 
