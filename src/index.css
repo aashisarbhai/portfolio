@@ -130,11 +130,11 @@ section {
   }
 
   .hero-photo-layout {
-    @apply relative z-10 mx-auto size-[220px] sm:size-[250px] md:size-[330px] lg:absolute lg:right-28 lg:top-[280px] lg:mx-0 xl:right-20 xl:top-24 xl:size-[400px];
+    @apply relative z-10 mx-auto flex w-[220px] flex-col items-center sm:w-[250px] md:w-[330px] lg:absolute lg:right-28 lg:top-[280px] lg:mx-0 lg:size-[330px] xl:right-20 xl:top-24 xl:size-[400px];
   }
 
   .hero-photo {
-    @apply w-full h-full rotate-[-28deg] object-cover object-center rounded-full shadow-2xl border-4 border-white/10;
+    @apply aspect-square w-full h-auto rotate-[-28deg] object-cover object-center rounded-full shadow-2xl border-4 border-white/10 lg:h-full;
   }
 
   .hero-profile-links {
