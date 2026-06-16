@@ -1,5 +1,5 @@
 const navLinks = [
-  { name: "Home", link: "#hero" },
+  { name: "About", link: "#about" },
   { name: "Skills", link: "#skills" },
   { name: "Projects", link: "#work" },
   { name: "Achievements", link: "#achievements" },

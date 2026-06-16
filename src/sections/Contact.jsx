@@ -68,13 +68,13 @@ const Contact = () => {
           sub="Have questions or ideas? Let's talk!"
         />
 
-        <div className="grid-12-cols mt-16">
+        <div className="grid-12-cols mt-10 md:mt-16">
           <div className="xl:col-span-5">
-            <div className="flex-center card-border rounded-xl p-10">
+            <div className="flex-center card-border rounded-xl p-5 sm:p-6 md:p-10">
               <form
                 ref={formRef}
                 onSubmit={handleSubmit}
-                className="w-full flex flex-col gap-7"
+                className="w-full flex flex-col gap-5 md:gap-7"
               >
                 <div>
                   <label htmlFor="name">Your name</label>

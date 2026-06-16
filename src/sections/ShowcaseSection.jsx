@@ -10,7 +10,7 @@ const projects = [
   {
     title: "StayEase - Full Stack Hotel Listing Platform",
     image: "/images/project1.png",
-    alt: "StayEase hotel listing platform",
+    alt: "StayEase project preview",
     bgClass: "bg-[#EAF2FF]",
     links: [
       {
@@ -33,7 +33,7 @@ const projects = [
   {
     title: "Finora - Full Stack Stock Trading Platform",
     image: "/images/project2.png",
-    alt: "Finora stock trading platform",
+    alt: "Finora project preview",
     bgClass: "bg-[#FFEFDB]",
     links: [
       {
@@ -61,7 +61,7 @@ const projects = [
   {
     title: "Meetify - Full Stack Video Conferencing Web Application",
     image: "/images/project3.png",
-    alt: "Meetify video conferencing application",
+    alt: "Meetify project preview",
     bgClass: "bg-[#FFE7EB]",
     links: [
       {

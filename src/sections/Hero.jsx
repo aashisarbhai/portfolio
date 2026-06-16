@@ -27,7 +27,7 @@ const Hero = () => {
       </div>
 
       <div className="hero-layout">
-        <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
+        <header className="flex flex-col justify-center w-full md:px-20 px-4 sm:px-5">
           <div className="flex flex-col gap-7">
             <div className="hero-text">
               <h1>
@@ -53,9 +53,8 @@ const Hero = () => {
             </div>
 
             <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-              I'm passionate about full-stack development and enjoy solving
-              <br />
-              problems on LeetCode.
+              I'm passionate about full-stack development and enjoy solving{" "}
+              <span className="inline md:block">problems on LeetCode.</span>
             </p>
 
             <Button
